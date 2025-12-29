@@ -1,4 +1,4 @@
-### 📘 Desenvolvendo REST / RESTful APIs com Ruby on Rails
+### 📘 Ruby on Rails | API Only
 
 Repositório criado para acompanhar o curso **Desenvolvendo REST / RESTful APIs com Ruby on Rails**, focado na construção de aplicações **API-only** utilizando Ruby on Rails, seguindo boas práticas de arquitetura REST, versionamento, autenticação, serialização e testes.
 
@@ -20,3 +20,12 @@ O objetivo deste repositório é documentar a evolução ao longo do curso e ser
 
 [Link do curso](https://www.udemy.com/course/rubyonrails-api/)
 [Github do Jackson](https://github.com/jacksonpires)
+
+
+## SETUP
+
+```ruby
+$ bundle
+$ rails db:create db:migrate
+$ rails dev:setup
+```
