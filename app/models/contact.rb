@@ -1,5 +1,6 @@
 class Contact < ApplicationRecord
   belongs_to :kind
+  has_many :phones
 
   def to_i18n
     {
