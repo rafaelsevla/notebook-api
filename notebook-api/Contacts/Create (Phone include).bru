@@ -1,0 +1,29 @@
+meta {
+  name: Create (Phone include)
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{API_URL}}/contacts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Bruce Wayne",
+    "email": "bruce@wayne.example",
+    "birthdate": "1987-08-18",
+    "kind_id": 2,
+    "phones_attributes": [
+      { "number": "12345" },
+      { "number": "67890" }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

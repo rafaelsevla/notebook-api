@@ -6,12 +6,12 @@ class ContactsController < ApplicationController
   def index
     @contacts = Contact.all
 
-    render json: @contacts
+    render json: @contacts, include: [ :phones ]
   end
 
   # GET /contacts/1
   def show
-    render json: @contact.to_i18n
+    render json: @contact, include: [ :phones ]
   end
 
   # POST /contacts
@@ -47,7 +47,10 @@ class ContactsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contact_params
-      params.expect(contact: [ :name, :email, :birthdate, :kind_id ])
+      params.require(:contact).permit(
+        :name, :email, :birthdate, :kind_id,
+        phones_attributes: [ :id, :number, :_destroy ]
+      )
     end
 
     def record_not_found
