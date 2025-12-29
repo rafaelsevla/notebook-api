@@ -1,0 +1,25 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{API_URL}}/contacts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Bruce Wayne",
+    "email": "bruce@wayne.example",
+    "birthdate": "1987-08-18",
+    "kind_id": 2
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

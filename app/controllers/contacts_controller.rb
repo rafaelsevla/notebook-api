@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: %i[ show update destroy ]
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   # GET /contacts
   def index
@@ -46,6 +47,10 @@ class ContactsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contact_params
-      params.expect(contact: [ :name, :email, :birthdate ])
+      params.expect(contact: [ :name, :email, :birthdate, :kind_id ])
+    end
+
+    def record_not_found
+      render json: { error: "Contato não encontrado" }, status: :not_found
     end
 end
