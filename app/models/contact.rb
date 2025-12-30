@@ -8,15 +8,7 @@ class Contact < ApplicationRecord
 
   def as_json(options = {})
     hash = super(options)
-    hash[:birthdate] = I18n.l(self.birthdate)
+    hash["birthdate"] = I18n.l(self.birthdate) if self.birthdate.present?
     hash
-  end
-
-  def to_i18n
-    {
-      name: self.name,
-      email: self.email,
-      birthdate: I18n.l(self.birthdate)
-    }
   end
 end
