@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_12_30_025539) do
+ActiveRecord::Schema[8.0].define(version: 2025_12_30_032710) do
   create_table "addresses", force: :cascade do |t|
     t.string "street"
     t.string "city"
-    t.integer "contact_id", null: false
+    t.integer "contact_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["contact_id"], name: "index_addresses_on_contact_id"

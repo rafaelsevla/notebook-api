@@ -5,21 +5,30 @@ meta {
 }
 
 patch {
-  url: {{API_URL}}/contacts/25
+  url: {{API_URL}}/contacts/101
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "name": "Bruce Wayne Batman",
-    "email": "bruce@wayne.example",
-    "birthdate": "1987-08-18",
-    "kind_id": 2,
+    "name": "Selena Kyle",
+    "email": "selena@kyle.example",
+    "birthdate": "05/03/1963",
+    "kind_id": 3,
     "phones_attributes": [
-      { "id": 223, "number": "12345" },
-      { "id": 224, "number": "67890" }
-    ]
+      {
+        "number": "(95) 98093-4373"
+      },
+      {
+        "id": 167,
+        "number": "(49) 97912-7726"
+      }
+    ],
+    "address_attributes": {
+      "street": "Avenida Francisco Matarazzo, 1705, R. Palestra Itália, 200",
+      "city": "São Paulo"
+    }
   }
 }
 
