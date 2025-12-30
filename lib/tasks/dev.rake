@@ -1,6 +1,9 @@
 namespace :dev do
   desc "Setup development environment"
   task setup: :environment do
+    %x(rails db:migrate:reset)
+    puts "Database reset successfully"
+
     kinds = %w[Amigo Comercial Familiar Conhecido]
     kinds.each do |kind|
       Kind.create!(description: kind)
@@ -23,5 +26,14 @@ namespace :dev do
       end
     end
     puts "Phones registered successfully"
+
+    Contact.all.each do |contact|
+      Address.create!(
+        street: Faker::Address.street_address,
+        city: Faker::Address.city,
+        contact: contact
+      )
+    end
+    puts "Addresses registered successfully"
   end
 end
