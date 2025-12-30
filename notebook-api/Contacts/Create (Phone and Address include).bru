@@ -1,0 +1,37 @@
+meta {
+  name: Create (Phone and Address include)
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{API_URL}}/contacts
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "name": "Selena Kyle",
+      "email": "selena@kyle.example",
+      "kind_id": 3,
+      "phones_attributes": [
+        {
+          "number": "(95) 98093-4373"
+        },
+        {
+          "number": "(49) 97912-7726"
+        }
+      ],
+      "address_attributes": {
+        "street": "Avenida Francisco Matarazzo, 1705, R. Palestra Itália, 200",
+        "city": "São Paulo"
+      },
+      "birthdate": "05/03/1963"
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
