@@ -108,6 +108,8 @@ GEM
       tzinfo
     faker (3.5.3)
       i18n (>= 1.8.11, < 2)
+    foreman (0.90.0)
+      thor (~> 1.4)
     fugit (1.12.1)
       et-orbi (~> 1.4)
       raabro (~> 1.4)
@@ -358,6 +360,7 @@ DEPENDENCIES
   brakeman
   debug
   faker
+  foreman
   kamal
   pry-rails
   puma (>= 5.0)
