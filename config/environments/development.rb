@@ -3,10 +3,6 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.hosts << "meusite.local"
-  config.hosts << "v1.meusite.local"
-  config.hosts << "v2.meusite.local"
-
   Rails.application.routes.default_url_options = {
     host: "localhost",
     port: 3000
