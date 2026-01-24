@@ -38,6 +38,7 @@ gem "rack-cors"
 
 gem "active_model_serializers", "~> 0.10.0"
 gem "foreman"
+gem "jwt"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
