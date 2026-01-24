@@ -1,0 +1,29 @@
+meta {
+  name: Delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{API_URL}}/contacts/102/phone
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+body:json {
+  {
+    "data": {
+      "id": "171",
+      "type": "phones"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

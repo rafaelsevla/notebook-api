@@ -1,0 +1,32 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{API_URL}}/contacts/102/phone
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+body:json {
+  {
+    "data": {
+      "id": "171",
+      "type": "phones",
+      "attributes": {
+        "number": "11181818181"
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
