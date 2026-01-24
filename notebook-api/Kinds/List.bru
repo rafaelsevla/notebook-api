@@ -7,7 +7,7 @@ meta {
 get {
   url: {{API_URL}}/kinds
   body: none
-  auth: inherit
+  auth: none
 }
 
 params:query {
@@ -16,6 +16,7 @@ params:query {
 
 headers {
   Accept: application/json
+  Authentication: Token secret123
 }
 
 settings {

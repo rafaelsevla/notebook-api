@@ -7,11 +7,12 @@ meta {
 get {
   url: {{API_URL}}/kinds/1
   body: none
-  auth: inherit
+  auth: none
 }
 
 headers {
   Accept: application/json
+  Authentication: Token secret123
 }
 
 settings {
