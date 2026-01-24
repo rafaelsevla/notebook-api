@@ -1,0 +1,20 @@
+meta {
+  name: Phones
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{API_URL}}/contacts/101/phones
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
