@@ -1,9 +1,20 @@
 meta {
-  name: Kinds
+  name: Sign In
+  type: http
+  seq: 2
 }
 
-auth {
-  mode: inherit
+post {
+  url: {{API_URL}}/auth/sign_in
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "dhh@rubyonrails.com",
+    "password": "12345678"
+  }
 }
 
 script:post-response {
@@ -15,4 +26,9 @@ script:post-response {
   bru.setEnvVar("CLIENT", client)
   bru.setEnvVar("UID", uid)
   
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
 }

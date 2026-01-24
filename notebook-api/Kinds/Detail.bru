@@ -12,7 +12,9 @@ get {
 
 headers {
   Accept: application/json
-  Authorization: Bearer {{JWT_TOKEN}}
+  access-token: {{ACCESS_TOKEN}}
+  uid: {{UID}}
+  client: {{CLIENT}}
 }
 
 settings {
