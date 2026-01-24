@@ -42,6 +42,7 @@ gem "jwt"
 gem "devise"
 gem "devise_token_auth"
 gem "devise-i18n"
+gem "versionist", "~> 1.5.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
