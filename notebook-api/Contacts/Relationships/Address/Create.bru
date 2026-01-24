@@ -1,0 +1,32 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{API_URL}}/contacts/102/address
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+body:json {
+  {
+    "data": {
+      "type": "addresses",
+      "attributes": {
+        "street": "Av. João Batista de Oliveira, 333 - Vila Xavier (Vila Xavier), Araraquara - SP, 14801-040",
+        "city": "Araraquara"
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
