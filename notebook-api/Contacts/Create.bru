@@ -12,10 +12,25 @@ post {
 
 body:json {
   {
-    "name": "Bruce Wayne",
-    "email": "bruce@wayne.example",
-    "birthdate": "1987-08-18",
-    "kind_id": 2
+    "data": {
+      "type": "contacts",
+      "attributes": {
+        "name": "Selena Kyle",
+        "email": "selena@kyle.example",
+        "birthdate": "1963-03-05T00:00:00-03:00"
+      },
+      "relationships": {
+        "kind": {
+          "data": {
+            "id": "3",
+            "type": "kinds"
+          },
+          "links": {
+            "related": "http://localhost:3000/kinds/3"
+          }
+        }
+      }
+    }
   }
 }
 

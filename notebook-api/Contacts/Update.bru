@@ -12,22 +12,25 @@ patch {
 
 body:json {
   {
-    "name": "Selena Kyle",
-    "email": "selena@kyle.example",
-    "birthdate": "05/03/1963",
-    "kind_id": 3,
-    "phones_attributes": [
-      {
-        "number": "(95) 98093-4373"
+    "data": {
+      "id": "101",
+      "type": "contacts",
+      "attributes": {
+        "name": "Selena Kyle gata",
+        "email": "selena3@kyle.example",
+        "birthdate": "1963-03-05T00:00:00-03:00"
       },
-      {
-        "id": 167,
-        "number": "(49) 97912-7726"
+      "relationships": {
+        "kind": {
+          "data": {
+            "id": "3",
+            "type": "kinds"
+          },
+          "links": {
+            "related": "http://localhost:3000/kinds/3"
+          }
+        }
       }
-    ],
-    "address_attributes": {
-      "street": "Avenida Francisco Matarazzo, 1705, R. Palestra Itália, 200",
-      "city": "São Paulo"
     }
   }
 }
