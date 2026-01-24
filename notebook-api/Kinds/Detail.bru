@@ -1,13 +1,17 @@
 meta {
-  name: Delete
+  name: Detail
   type: http
-  seq: 8
+  seq: 2
 }
 
-delete {
-  url: {{API_URL}}/contacts/103
+get {
+  url: {{API_URL}}/kinds/1
   body: none
   auth: inherit
+}
+
+headers {
+  Accept: application/json
 }
 
 settings {
