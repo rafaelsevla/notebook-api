@@ -1,4 +1,5 @@
-class ContactsController < ApplicationController
+module V1
+  class ContactsController < ApplicationController
   before_action :set_contact, only: %i[ show update destroy ]
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
@@ -53,4 +54,5 @@ class ContactsController < ApplicationController
     def record_not_found
       render json: { error: "Contato não encontrado" }, status: :not_found
     end
+  end
 end
