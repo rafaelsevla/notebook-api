@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: {{API_URL}}/v1/contacts?page=2
+  url: {{API_URL}}/v1/contacts?page[number]=1&page[size]=5
   body: none
   auth: inherit
 }
 
 params:query {
-  page: 2
+  page[number]: 1
+  page[size]: 5
 }
 
 headers {
