@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{API_URL}}/v1/contacts
+  url: {{API_URL}}/v1/contacts?page=2
   body: none
   auth: inherit
+}
+
+params:query {
+  page: 2
 }
 
 headers {
