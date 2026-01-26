@@ -5,13 +5,21 @@ meta {
 }
 
 get {
-  url: {{API_URL}}/contacts/101
+  url: {{API_URL}}/v1/contacts/101
   body: none
   auth: inherit
 }
 
 headers {
   Accept: application/json
+  If-Modified-Since: {{LAST_MODIFIED_CACHE}}
+}
+
+script:post-response {
+  const last_modified = res.getHeader('last-modified')
+  
+  bru.setEnvVar("LAST_MODIFIED_CACHE", last_modified)
+  
 }
 
 settings {

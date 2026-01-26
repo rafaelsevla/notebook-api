@@ -17,6 +17,14 @@ params:query {
 
 headers {
   Accept: application/json
+  If-None-Match: {{ETAG}}
+}
+
+script:post-response {
+  const etag = res.getHeader('etag')
+  
+  bru.setEnvVar("ETAG", etag)
+  
 }
 
 settings {

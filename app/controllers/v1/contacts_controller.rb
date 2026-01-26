@@ -12,12 +12,16 @@ module V1
       @contacts = Contact.all.page(page_number).per(page_size)
 
       # Cache-Control: expires_in 30.seconds, public: true
-      render json: @contacts, include: [ :phones, :address ]
+      if stale?(etag: @contacts)
+        render json: @contacts
+      end
     end
 
     # GET /contacts/1
     def show
-      render json: @contact, include: [ :kind, :address, :phone ]
+      if stale?(last_modified: @contact.updated_at)
+        render json: @contact, include: [ :kind, :address, :phone ]
+      end
     end
 
     # POST /contacts
