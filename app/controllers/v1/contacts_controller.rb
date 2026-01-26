@@ -11,6 +11,7 @@ module V1
       page_size = params[:page].try(:[], :size)
       @contacts = Contact.all.page(page_number).per(page_size)
 
+      # Cache-Control: expires_in 30.seconds, public: true
       render json: @contacts, include: [ :phones, :address ]
     end
 
