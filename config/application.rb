@@ -1,4 +1,5 @@
 require_relative "boot"
+require_relative "../lib/middleware/app_name"
 
 require "rails/all"
 
@@ -31,5 +32,6 @@ module NotebookApi
 
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.use AppName, "Notebook API"
   end
 end
