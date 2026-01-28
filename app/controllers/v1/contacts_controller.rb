@@ -20,7 +20,7 @@ module V1
     # GET /contacts/1
     def show
       if stale?(last_modified: @contact.updated_at)
-        render json: @contact, include: [ :kind, :address, :phone ]
+        render json: @contact
       end
     end
 
