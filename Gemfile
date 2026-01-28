@@ -42,7 +42,7 @@ gem "jwt"
 gem "devise"
 gem "devise_token_auth"
 gem "devise-i18n"
-gem "versionist", "~> 1.5.0"
+gem "versionist", "~> 2.0.1"
 gem "kaminari"
 
 group :development, :test do

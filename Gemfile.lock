@@ -222,7 +222,7 @@ GEM
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.7.0)
+    prism (1.8.0)
     pry (0.16.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -282,7 +282,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.1)
-    rdoc (7.0.3)
+    rdoc (7.1.0)
       erb
       psych (>= 4.0.0)
       tsort
@@ -371,7 +371,7 @@ GEM
       net-ssh (>= 2.8.0)
       ostruct
     stringio (3.2.0)
-    thor (1.4.0)
+    thor (1.5.0)
     thruster (0.1.17)
     thruster (0.1.17-aarch64-linux)
     thruster (0.1.17-arm64-darwin)
@@ -386,10 +386,10 @@ GEM
     unicode-emoji (4.2.0)
     uri (1.1.1)
     useragent (0.16.11)
-    versionist (1.5.0)
+    versionist (2.0.1)
       activesupport (>= 3)
       railties (>= 3)
-      yard (~> 0.7)
+      yard (~> 0.9.20)
     warden (1.2.9)
       rack (>= 2.0.9)
     websocket-driver (0.8.0)
@@ -437,7 +437,7 @@ DEPENDENCIES
   sqlite3 (>= 2.1)
   thruster
   tzinfo-data
-  versionist (~> 1.5.0)
+  versionist (~> 2.0.1)
 
 BUNDLED WITH
    2.7.2
